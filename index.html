@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Finance Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Expense Tracker</h2>
+    <p>Total Balance</p>
+    <h1>₹<span id="balance">0</span></h1>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+
+    <div class="cards">
+      <div class="card income-card">
+        <p>Income</p>
+        <h3>₹<span id="income">0</span></h3>
+      </div>
+      <div class="card expense-card">
+        <p>Expense</p>
+        <h3>₹<span id="expense">0</span></h3>
+      </div>
+      <div class="card lent-card">
+        <p>Udhaar Diya</p>
+        <h3>₹<span id="lent">0</span></h3>
+      </div>
+      <div class="card borrow-card">
+        <p>Udhaar Liya</p>
+        <h3>₹<span id="borrowed">0</span></h3>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <form id="form" class="form">
+      <input type="text" id="person" placeholder="Person Name">
+      <input type="text" id="purpose" placeholder="Purpose" required>
+      <input type="number" id="amount" placeholder="Amount" required>
+
+      <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+        <option value="lent">Udhaar Diya</option>
+        <option value="borrowed">Udhaar Liya</option>
+      </select>
+
+      <input type="date" id="date">
+      <input type="date" id="dueDate">
+
+      <button type="submit">Add Transaction</button>
+    </form>
+
+    <!-- Search & Filter -->
+    <div class="filters">
+      <input type="text" id="search" placeholder="Search by name">
+      <select id="filterType">
+        <option value="all">All</option>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+        <option value="lent">Lent</option>
+        <option value="borrowed">Borrowed</option>
+      </select>
+    </div>
+<div class="report-section">
+  <button onclick="generateWeeklyReport()">Weekly Report</button>
+  <button onclick="generateMonthlyReport()">Monthly Report</button>
+
+  <div class="report-box" id="reportBox">
+    <h3>Report Summary</h3>
+    <p id="reportContent">No report generated yet.</p>
+  </div>
+</div>
+    <!-- Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Person</th>
+          <th>Purpose</th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="list"></tbody>
+    </table>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

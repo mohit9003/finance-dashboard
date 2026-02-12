@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f4f6f9;
+}
+
+.layout {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background: #1e293b;
+  color: white;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.sidebar h1 {
+  font-size: 28px;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.income-card { border-left: 5px solid green; }
+.expense-card { border-left: 5px solid red; }
+.lent-card { border-left: 5px solid blue; }
+.borrow-card { border-left: 5px solid orange; }
+
+.form input, .form select, .form button {
+  padding: 8px;
+  margin: 5px;
+}
+
+.form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.filters {
+  margin: 15px 0;
+}
+
+table {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+button.delete {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.report-section {
+  margin: 20px 0;
+}
+
+.report-section button {
+  padding: 8px 15px;
+  margin-right: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.report-box {
+  margin-top: 15px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
